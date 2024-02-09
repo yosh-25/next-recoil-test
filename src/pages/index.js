@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Link from "next/link";
 import { useRecoilState} from 'recoil';
@@ -23,7 +24,7 @@ const Home = () => {
       <button onClick={()=> setCount(increment)}>count increment</button>
       <hr/>
       <p>user.name:{user.name}</p>
-      <p>user.age:{user.age}</p>
+      <p suppressHydrationWarning={true} >user.age:{user.age}</p>
       <button onClick={()=> setUser(updateUser)} >age increment</button>
     </div>
     <hr/>
@@ -34,4 +35,4 @@ const Home = () => {
   );
 }
 
-export default Home
+export default Home;
